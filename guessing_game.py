@@ -5,7 +5,7 @@ level = input("Enter a level number here: ")
 if level == "1":
    # easy level
    print("You have selected Easy Level")
-   secretNunber = random.choice(range(10))
+   secretNunber = random.randrange(1, 11)
    guess = 0
    guessCount = 0
    guessLimit = 6
@@ -38,7 +38,7 @@ if level == "1":
 elif level == "2":
       # Medium
       print("You have selected Medium Level")
-      secretNunber = random.choice(range(20))
+      secretNunber = random.randrange(1, 21)
       guess = 0
       guessCount = 0
       guessLimit = 4
@@ -68,7 +68,7 @@ elif level == "2":
 elif level == "3":
    # Hard
       print("You have selected Hard Level")
-      secretNunber = random.choice(range(50))
+      secretNunber = random.randrange(1, 51)
       guess = 0
       guessCount = 0
       guessLimit = 3
