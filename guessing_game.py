@@ -1,10 +1,11 @@
+import random
 print("Welcome to our guessing game...")
 print("Please, select the level you wish to play.\nPress 1 for Easy.\nPress 2 for Medium \nPress 3 for Hard")
 level = input("Enter a level number here: ")
 if level == "1":
    # easy level
    print("You have selected Easy Level")
-   secretNunber = 6
+   secretNunber = random.choice(range(10))
    guess = 0
    guessCount = 0
    guessLimit = 6
@@ -14,8 +15,8 @@ if level == "1":
    while guess != secretNunber and outOfGuesses == False:
       if guessCount < guessLimit:
          try:
+            # store guess input as integer in variable guess
             guess = int(input("Guess a number between 1 - 10: "))
-            # converts guess input to eger
             if guess == secretNunber:
                print("You got it right!")
             elif guess > 10:
@@ -37,7 +38,7 @@ if level == "1":
 elif level == "2":
       # Medium
       print("You have selected Medium Level")
-      secretNunber = 12
+      secretNunber = random.choice(range(20))
       guess = 0
       guessCount = 0
       guessLimit = 4
@@ -67,7 +68,7 @@ elif level == "2":
 elif level == "3":
    # Hard
       print("You have selected Hard Level")
-      secretNunber = 43
+      secretNunber = random.choice(range(50))
       guess = 0
       guessCount = 0
       guessLimit = 3
